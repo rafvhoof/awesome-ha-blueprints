@@ -310,23 +310,23 @@ actions:
   # choose the sequence to run based on the received button event
   - choose:
       - conditions: '{{ trigger_action | string in button_left_press }}'
-        sequence: !input action_button_left_press
+        sequence: !input action_left_press
       - conditions: '{{ trigger_action | string in button_left_press_release }}'
-        sequence: !input action_button_left_press_release
+        sequence: !input action_left_press_release
       - conditions: '{{ trigger_action | string in button_right_press }}'
-        sequence: !input action_button_right_press
+        sequence: !input action_right_press
       - conditions: '{{ trigger_action | string in button_right_press_release }}'
-        sequence: !input action_button_right_press_release
+        sequence: !input action_right_press_release
       - conditions: '{{ trigger_action | string in button_left_hold }}'
-        sequence: !input action_button_left_hold
+        sequence: !input action_left_hold
       - conditions: '{{ trigger_action | string in button_left_hold_release }}'
-        sequence: !input action_button_left_hold_release
+        sequence: !input action_left_hold_release
       - conditions: '{{ trigger_action | string in button_right_hold }}'
-        sequence: !input action_button_right_hold
+        sequence: !input action_right_hold
       - conditions: '{{ trigger_action | string in button_right_hold_release }}'
-        sequence: !input action_button_right_hold_release
+        sequence: !input action_right_hold_release
       - conditions: '{{ trigger_action | string in button_toggle }}'
-        sequence: !input action_button_toggle
+        sequence: !input action_toggle
       - conditions: '{{ trigger_action | string in button_brightness_move_up }}'
         sequence: !input action_button_brightness_move_up
       - conditions: '{{ trigger_action | string in button_brightness_move_down }}'
