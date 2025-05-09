@@ -141,8 +141,8 @@ blueprint:
 variables:
   # convert input tags to variables, to be used in templates
   integration: !input integration
-  #button_left_press: !input button_left_press
-  #button_left_press_release: !input button_left_press_release
+  button_left_press: !input button_left_press
+  button_left_press_release: !input button_left_press_release
   button_right_press: !input button_right_press
   button_right_press_release: !input button_right_press_release
   button_left_hold: !input button_left_hold
