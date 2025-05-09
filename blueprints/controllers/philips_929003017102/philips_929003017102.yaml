@@ -155,9 +155,6 @@ variables:
   button_brightness_stop: !input brightness_stop
   # integration id used to select items in the action mapping
   integration_id: '{{ integration | lower }}'
-  # adjusted debounce delay so that the resulting double press delay is exactly as specified by the user when running the action, taking also account of debouncing
-  # make sure it never goes below the minimum double press delay
-  adjusted_double_press_delay: '{{ [helper_double_press_delay - helper_debounce_delay, 100] | max }}'
   # mapping between actions and integrations
   actions_mapping:
     zha:
