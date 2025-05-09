@@ -141,21 +141,18 @@ blueprint:
 variables:
   # convert input tags to variables, to be used in templates
   integration: !input integration
-  button_on_long_loop: !input button_on_long_loop
-  button_on_long_max_loop_repeats: !input button_on_long_max_loop_repeats
-  button_on_double_press: !input button_on_double_press
-  button_off_long_loop: !input button_off_long_loop
-  button_off_long_max_loop_repeats: !input button_off_long_max_loop_repeats
-  button_off_double_press: !input button_off_double_press
-  button_up_long_loop: !input button_up_long_loop
-  button_up_long_max_loop_repeats: !input button_up_long_max_loop_repeats
-  button_up_double_press: !input button_up_double_press
-  button_down_long_loop: !input button_down_long_loop
-  button_down_long_max_loop_repeats: !input button_down_long_max_loop_repeats
-  button_down_double_press: !input button_down_double_press
-  helper_last_controller_event: !input helper_last_controller_event
-  helper_double_press_delay: !input helper_double_press_delay
-  helper_debounce_delay: !input helper_debounce_delay
+  button_left_press: !input button_left_press
+  button_left_press_release: !input button_left_press_release
+  button_right_press: !input button_right_press
+  button_right_press_release: !input button_right_press_release
+  button_left_hold: !input button_left_hold
+  button_left_hold_release: !input button_left_hold_release
+  button_right_hold: !input button_right_hold
+  button_right_hold_release: !input button_right_hold_release
+  button_toggle: !input button_toggle
+  button_brightness_move_up: !input brightness_move_up
+  button_brightness_move_down: !input brightness_move_down
+  button_brightness_stop: !input brightness_stop
   # integration id used to select items in the action mapping
   integration_id: '{{ integration | lower }}'
   # adjusted debounce delay so that the resulting double press delay is exactly as specified by the user when running the action, taking also account of debouncing
