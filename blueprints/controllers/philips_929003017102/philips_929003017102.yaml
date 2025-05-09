@@ -328,8 +328,8 @@ actions:
       - conditions: '{{ trigger_action | string in button_toggle }}'
         sequence: !input action_toggle
       - conditions: '{{ trigger_action | string in button_brightness_move_up }}'
-        sequence: !input action_button_brightness_move_up
+        sequence: !input action_brightness_move_up
       - conditions: '{{ trigger_action | string in button_brightness_move_down }}'
-        sequence: !input action_button_brightness_move_down
+        sequence: !input action_brightness_move_down
       - conditions: '{{ trigger_action | string in button_brightness_stop }}'
-        sequence: !input action_button_brightness_stop
+        sequence: !input action_brightness_stop
