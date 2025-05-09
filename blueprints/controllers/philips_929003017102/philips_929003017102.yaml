@@ -286,11 +286,6 @@ conditions:
         {%- endset -%}
         {{ trigger_action not in ["","None"] }}
 actions:
-  # debouncing - when automation is triggered multiple times, the last automation run is the one which completes execution, due to mode restart
-  # therefore previous runs must wait for the debounce delay before executing any other action
-  # if the delay expires and the automation is still running it means it's the last run and execution can continue
-  - delay:
-      milliseconds: !input helper_debounce_delay
   # extract button event from the trigger
   # provide a single string value to check against
   - variables:
@@ -302,8 +297,6 @@ actions:
         {%- elif integration_id == "zha" -%}
         {{ trigger.event.data.command }}
         {%- endif -%}
-      deserialized_state: '{{ (states(helper_last_controller_event) | from_json) if helper_last_controller_event is not none and (states(helper_last_controller_event) | regex_match("^\{\s*?((\"a\":\s*?\".*\"|\"t\":\s*?\d+\.\d+)(,\s*?)?){2}\s*?\}$")) else {} }}'
-      trigger_delta: '{{ (as_timestamp(now()) - (deserialized_state.t | default(0))) * 1000 }}'
   # choose the sequence to run based on the received button event
   - choose:
       - conditions: '{{ trigger_action | string in button_left_press }}'
