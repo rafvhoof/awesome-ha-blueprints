@@ -200,7 +200,7 @@ variables:
   button_brightness_stop: '{{ actions_mapping[integration_id]["button_brightness_stop"] }}'
   # build data to send within a controller event
   controller_id: !input controller_device
-mode: restart
+mode: single
 max_exceeded: silent
 triggers:
   # triggers for zigbee2mqtt mqtt device action
